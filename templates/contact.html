@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block head %}
+        <header class="masthead" style="background-image: url('static/img/contact-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Contact Me</h1>
+                            <span class="subheading">Have questions related to programming question?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Fill out the form below to send me a message and I will get back to you as soon as possible with the suitable answer !</p>
+                        <div class="my-5">
+                            <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/Contact">
+                                <div class="form-floating">
+                                    <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
+                                    <label for="name">Name</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="email" type="email" name="email" placeholder="Enter your email..." required />
+                                    <label for="email">Email address</label>
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="phone" type="tel" name="phone" placeholder="Enter your phone number..." required />
+                                    <label for="phone">Phone Number</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Enter your problem..." style="height: 12rem" required></textarea>
+                                    <label for="message">Question ?</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+                                <br />
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Form submission successful!</div>
+                                        To activate this form, sign up at
+                                        <br />
+                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit" href="/Contact">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe src="https://www.fiverr.com/gig_widgets?id=U2FsdGVkX18F1Ig4J4nsx2MQuBxAXLPIGbJpdOZdxCo2MrIMzm63WD5+/wDd+tniVp2zXP5Xv4nlLbddTgJBvYYdWAYgf+GGBFdmT3tQrHI4Ny9Ng7V+ULprkaEK1mGxRuiwP2gBhUdJ08iWhzF/n9RxiOTKTtzgHQwdqmvF3SiZqzMrFH8lYZzZOKjws2SBFefRHFlqiOixRqvK7ahGOUDfWZvYDIHTarlUYyHcUZiWFyZE/G9XkImutwREI0DsEzyJxKRwlKOzqtRk1YS1udHibfotWMfGORxM+6vMy4DXyB93hDNmn6ayDwt66qoO9ylDGoiPtutP5zSRxNqHWFIw4Y9DZ65s+8ltZOZiQSHf7ZvKMhaQves/WzQvJ5cqIWgGuZRxzW+Qs5s2T8nDBBsjv6ERMnl3Xc4XZzRF4I9ZwB71yGSV03KO7CA2ExAcNCA94yC7cfxEak0F4mfdIL07WUUqjcPgaN8UxCnQ2J0G+hWqm1WL0DzMjZL7LtClH7k5KAteEPeVfychJRroBxbeO1zy2VEsXFwrdpElrP7hfNebeaCx8demZ0yWp92k&affiliate_id=490936&strip_google_tagmanager=true" loading="lazy" data-with-title="true" class="fiverr_nga_frame" frameborder="0" height="350" width="100%" referrerpolicy="no-referrer-when-downgrade" data-mode="random_gigs" onload=" var frame = this; var script = document.createElement('script'); script.addEventListener('load', function() { window.FW_SDK.register(frame); }); script.setAttribute('src', 'https://www.fiverr.com/gig_widgets/sdk'); document.body.appendChild(script); " ></iframe>
+        </main>
+        {% endblock %}

@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+{% block head %}
+        <header class="masthead" style="background-image: url('static/img/EditPost.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Add New Post</h1>
+                            <span class="subheading">New Codes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Put your thoughts help the word with knowledge you and increase the knowledge of entire world</p>
+                        <div class="my-5">
+                            <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/edit">
+                                <div class="form-floating">
+                                    <input class="form-control" id="title" name="title" type="text" placeholder="Enter your name..." required />
+                                    <label for="name">Title</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="slug" type="text" name="slug" placeholder="Enter your email..." required />
+                                    <label for="email">Slug</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content" name="content" placeholder="Enter your problem..." style="height: 12rem" required></textarea>
+                                    <label for="message">Content</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content1" name="content1" placeholder="Enter your problem..." style="height: 12rem" required></textarea>
+                                    <label for="message">Content One</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content2" name="content2" placeholder="Enter your problem..." style="height: 12rem" required></textarea>
+                                    <label for="message">Content Two</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content3" name="content3" placeholder="Enter your problem..." style="height: 12rem" required></textarea>
+                                    <label for="message">Content Three</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input class="form-control" id="tagline" type="text" name="tagline" placeholder="Enter your email..." required />
+                                    <label for="email">Tagline</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="dates" type="date" name="dates" placeholder="Enter your email..." required />
+                                    <label for="email">Date</label>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input class="form-control" id="author" type="text" name="author" placeholder="Enter your email..." required />
+                                    <label for="email">Athour</label>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="codes" name="codes" placeholder="Enter your problem..." style="height: 12rem" required></textarea>
+                                    <label for="message">Code</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="video" name="video" type="text" placeholder="Enter your problem..." style="height: 12rem" required></textarea>
+                                    <label for="message">Link Youtube Video</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="fiveer" name="fiveer" type="text" placeholder="Enter your problem..." style="height: 12rem" required></textarea>
+                                    <label for="message">Link Fiveer </label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input class="form-control" id="img_file" name="img_file" type="file" placeholder="Enter your image" required></input>
+                                    <label for="message">BackGroud Image </label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input class="form-control" id="img1" name="img1" type="file" placeholder="Enter your image" required></input>
+                                    <label for="message">Image One</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input class="form-control" id="img2" name="img2" type="file" placeholder="Enter your image" required></input>
+                                    <label for="message">Image Two</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input class="form-control" id="img3" name="img3" type="file" placeholder="Enter your image" required></input>
+                                    <label for="message">Image Three</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Enter your problem...</div>
+                                </div>
+
+                                <br />
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Form submission successful!</div>
+                                        To activate this form, sign up at
+                                        <br />
+                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit" href="/edit">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe src="https://www.fiverr.com/gig_widgets?id=U2FsdGVkX18F1Ig4J4nsx2MQuBxAXLPIGbJpdOZdxCo2MrIMzm63WD5+/wDd+tniVp2zXP5Xv4nlLbddTgJBvYYdWAYgf+GGBFdmT3tQrHI4Ny9Ng7V+ULprkaEK1mGxRuiwP2gBhUdJ08iWhzF/n9RxiOTKTtzgHQwdqmvF3SiZqzMrFH8lYZzZOKjws2SBFefRHFlqiOixRqvK7ahGOUDfWZvYDIHTarlUYyHcUZiWFyZE/G9XkImutwREI0DsEzyJxKRwlKOzqtRk1YS1udHibfotWMfGORxM+6vMy4DXyB93hDNmn6ayDwt66qoO9ylDGoiPtutP5zSRxNqHWFIw4Y9DZ65s+8ltZOZiQSHf7ZvKMhaQves/WzQvJ5cqIWgGuZRxzW+Qs5s2T8nDBBsjv6ERMnl3Xc4XZzRF4I9ZwB71yGSV03KO7CA2ExAcNCA94yC7cfxEak0F4mfdIL07WUUqjcPgaN8UxCnQ2J0G+hWqm1WL0DzMjZL7LtClH7k5KAteEPeVfychJRroBxbeO1zy2VEsXFwrdpElrP7hfNebeaCx8demZ0yWp92k&affiliate_id=490936&strip_google_tagmanager=true" loading="lazy" data-with-title="true" class="fiverr_nga_frame" frameborder="0" height="350" width="100%" referrerpolicy="no-referrer-when-downgrade" data-mode="random_gigs" onload=" var frame = this; var script = document.createElement('script'); script.addEventListener('load', function() { window.FW_SDK.register(frame); }); script.setAttribute('src', 'https://www.fiverr.com/gig_widgets/sdk'); document.body.appendChild(script); " ></iframe>
+        </main>
+        {% endblock %}

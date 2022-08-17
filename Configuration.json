@@ -1,0 +1,17 @@
+{
+    "param":
+    {
+        "local_server":"mysql://root:zaryab@localhost/Blog",
+        "Production_server":"mysql://root:zaryab@localhost/Blog",
+        "UserName":"Zaryab",
+        "Password":"Zaryab",
+        "gmail-user":"zk126128@gmail.com",
+        "gmail-password":"gcfwjbdlhkpevjvl",
+        "webname":"Code Expert",
+        "subtitle":"Programming Makes Everything Easy",
+        "title":"Code Expert",
+        "Copyright":"Zaryab Khan",
+        "no_of_posts":5,
+        "upload_location":"C:\\Users\\ZARYAB KHAN\\Desktop\\blog\\static\\img"
+    }
+}

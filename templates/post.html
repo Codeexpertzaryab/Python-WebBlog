@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+  .responsive {
+    width: 100%;
+    height: auto;
+}
+</style>
+{% set fname4 = 'img/' + post.img_file %}
+<header class="masthead" style="background-image: url('{{ url_for('static', filename=fname4) }}')">
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="post-heading">
+          <h1>{{post.title}}</h1>
+          <h2 class="subheading">{{post.tagline}}</h2>
+          <span class="meta">Posted by Admin
+            on {{post.dates}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h3>Reference Video</h3>
+        <iframe class="responsive" width="500" height="500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="{{post.video}}" ></iframe>
+        <p>{{post.content}} </p>
+        {% set fname = 'img/' + post.img1 %}
+        <img class="responsive" width="500" height="360" src="{{url_for('static', filename=fname)}}">
+        <p>{{post.content1}} </p>
+        {% set fname2 = 'img/' + post.img2 %}
+        <img class="responsive" width="500" height="360" src="{{url_for('static', filename=fname2)}}"> 
+        <p>{{post.content2}} </p>
+        {% set fname3 = 'img/' + post.img3 %}
+        <img class="responsive" width="500" height="360" src="{{url_for('static', filename=fname3)}}">  
+        <p>{{post.content3}} </p>
+        <h3>Code</h3>
+        <pre class='brush: cpp' style="background-color: black;color: white;border-radius: 20px;">
+        {{post.codes}}
+        </pre>  
+        <p>Download Source Code &#8609;</p>    
+        <a href="/Blog/Download/{{post.slug}}" class="btn btn-primary" style="text-decoration:none ;">Source Code</a><br><br>
+      </div>
+    </div>
+ </div>
+ <iframe loading="lazy" data-with-title="true" class="fiverr_nga_frame" frameborder="0" height="350" width="100%" referrerpolicy="no-referrer-when-downgrade" data-mode="random_gigs" onload=" var frame = this; var script = document.createElement('script'); script.addEventListener('load', function() { window.FW_SDK.register(frame); }); script.setAttribute('src', 'https://www.fiverr.com/gig_widgets/sdk'); document.body.appendChild(script);" src="{{post.fiveer}}" ></iframe>
+</article>
+{% endblock %}
